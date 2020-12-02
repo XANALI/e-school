@@ -1,0 +1,19 @@
+<div class="container">
+  <header class="header">
+    <div class="wrapper">
+      <div class="header__inner">
+        <h3 class="logo">{{ title }}</h3>
+        <nav class="nav">
+          <a routerLink="/" class="nav__link">All Users</a>
+          <a routerLink="/add-student" class="nav__link">Add User</a>
+          <a [routerLink]="['/login']" (click)="logout()" class="nav__link">Logout</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div class="main">
+    <div class="wrapper">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

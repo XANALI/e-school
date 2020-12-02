@@ -1,0 +1,30 @@
+<div class="student-form">
+  <div class="form__header">
+    <h3 class="header__text">Add User</h3>
+  </div>
+  <form class="form" (ngSubmit)="onSubmit()" #studentForm="ngForm">
+    <div class="form__group">
+      <label class="group__label" for="first_name">First Name:</label>
+      <input class="group__input" type="text" [(ngModel)]="student.lastName" id="first_name" name="first_name" placeholder="Enter your first name:" required #first_name="ngModel">
+      <div [hidden]="!first_name.pristine" class="group__error">First Name is required</div>
+    </div>
+    <div class="form__group">
+      <label class="group__label" for="last_name">Last Name:</label>
+      <input class="group__input" type="text" [(ngModel)]="student.firstName" id="last_name" name="last_name" placeholder="Enter your last name:" required #last_name="ngModel">
+      <div [hidden]="!last_name.pristine" class="group__error">Last Name is required</div>
+    </div>
+    <div class="form__group">
+      <label class="group__label" for="email">Email:</label>
+      <input class="group__input" type="email" [(ngModel)]="student.email" id="email" name="email" placeholder="Enter your email:" required pattern="[a-zA-Z_.]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}" #email="ngModel">
+      <div [hidden]="email.valid || email.untouched" class="group__error">Email is required</div>
+    </div>
+    <div class="form__group">
+      <label class="group__label" for="password">Password:</label>
+      <input class="group__input" type="password" [(ngModel)]="student.password" id="password" name="password" placeholder="Enter your password:" required #password="ngModel">
+      <div [hidden]="!password.pristine" class="group__error">Password is required</div>
+    </div>
+    <div class="form__button">
+      <button [disabled]="!studentForm.form.valid" type="submit" class="add-button">Add Student</button>
+    </div>
+  </form>
+</div>

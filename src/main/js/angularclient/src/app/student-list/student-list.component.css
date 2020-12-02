@@ -1,0 +1,36 @@
+.student-list {
+  margin-top: 30px;
+}
+
+.list-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.list-table, .row__element {
+  border: 1px solid #F1F2F2;
+}
+
+.table__head {
+  background-color: #009879;
+  color: #ffffff;
+}
+
+.row__element {
+  padding: 10px 5px;
+}
+
+.body__row {
+  color: #414042;
+  background-color: #E5F0FF;
+}
+
+.body__row:nth-child(2n - 1){
+  background-color: #F2F8FD;
+}
+
+td {
+  text-align: center;
+}
+
+

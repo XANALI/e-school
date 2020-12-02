@@ -1,0 +1,25 @@
+<div class="student-list">
+  <table class="list-table">
+    <thead class="table__head">
+      <tr class="head__row">
+        <th class="row__element">ID</th>
+        <th class="row__element">First Name</th>
+        <th class="row__element">Last Name</th>
+        <th class="row__element">Email</th>
+        <th class="row__element">Password</th>
+        <th class="row__element">Action</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+      <tr *ngFor="let student of students" class="body__row">
+        <td class="row__element">{{ student.id }}</td>
+        <td class="row__element">{{ student.firstName }}</td>
+        <td class="row__element">{{ student.lastName }}</td>
+        <td class="row__element"><a href="mailto:{{ student.email }}">{{ student.email }}</a></td>
+        <td class="row__element">{{ student.password }}</td>
+        <td class="row__element"><a href="#" (click)="deleteStudent(student.id)">DELETE</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

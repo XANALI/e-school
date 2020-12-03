@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="myProject" verbose="5">
+    <test name="serviceTests">
+        <packages>
+            <package
+                    name="kz.khan.eschool.ESchoolApplicationTests"/>
+        </packages>
+    </test>
+</suite>

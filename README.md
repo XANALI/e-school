@@ -36,5 +36,22 @@ If it showed its current version angular cli is installed correctly, else you ca
 
 ### 2.2 Project running
 Actually, now you can run your project. Open the command line in `%YOUR_FOLDER_PATH%/e-school` folder, then write this command `mvn spring-boot:run`.
-Now we have started server running, next we have to our frontend angular project. For this you have to open a new command line in `%YOUR_FOLDER_PATH%/e-school/src/main/js/angularclient` folder. Then you have to write this command `ng serve --open`. Now you can write `localhost:4200` url in your browser. 
+Now we have started server running, next we have to run our frontend angular project. For this you have to open a new command line in `%YOUR_FOLDER_PATH%/e-school/src/main/js/angularclient` folder. Then you have to write this command `npm install` to install project packages, and after that write command `ng serve --open`. Now you can go to the `localhost:4200` url in your browser.
+
+## 3. Application interface
+
+### 3.1 Login Page
+When you first time go to the `localhost:4200` you will be redirected to `localhost:4200/login` page, because you are not logged in. You can login using `username: username, password: password` credentials.
+
+### 3.2 Students Page
+When you login to the system you will be redirected to `localhost:4200/students` page, where you can see a table of all users which stored in database. In table you have a `ACTION` column where you can delete a student by selecting it's delete link
+
+### 3.3 Add User Page
+In navigation bar you can press `Add User` link and go to the `localhost:4200/add-student` page, where you can fill student's attributes and save it by pressing `Add Student` button.
+
+### 3.4 Logout
+You can logout from the system by pressing `Logout` link in the navigation bar, and redirected to the login page. You will not be able to see `localhost:4200/students` and `localhost:4200/add-student` pages while you are not logged in.
+
+
+
 

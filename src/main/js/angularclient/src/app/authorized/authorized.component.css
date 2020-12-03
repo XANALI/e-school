@@ -32,3 +32,12 @@
   text-decoration: none;
   margin: 0 10px;
 }
+
+.nav__link:hover {
+  color: #E5F0FF;
+  text-decoration: underline;
+}
+
+.nav__link:active {
+  color: #939598;
+}
